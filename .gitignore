@@ -1,0 +1,14 @@
+##
+##  PLUS SUPPORTER PACKAGE
+##
+/plugin-plus.php
+/system/reactions-plus.php
+/system/reactions-logs.php
+/system/reactions-users.php
+/system/admin-dashboard.php
+
+##
+##  TRANSLATION DEVELOPMENT
+##
+/fetch-strings.php
+/fetch-en.json

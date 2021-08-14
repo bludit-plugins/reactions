@@ -1,0 +1,341 @@
+/*
+ |  Reactions   Let your users react to your content.
+ |  @file       ./system/css/reactions.css
+ |  @author     SamBrishes <sam@pytes.net>
+ |  @version    1.0.1 [1.0.0] - Stable
+ |
+ |  @website    https://github.com/pytesNET/reactions
+ |  @license    X11 / MIT License
+ |  @copyright  Copyright © 2019 - 2020 pytesNET <info@pytes.net>
+ */
+
+/* @start GENERAL */
+.plugin-reactions {
+    text-align: center;
+}
+.container-reactions {
+    margin: 25px auto 15px;
+}
+.reactions-panel {
+    margin: 25px 0 15px;
+    padding: 25px 0 0;
+    border-width: 1px 0 0;
+    border-style: solid;
+    border-color: #ddd;
+}
+.reactions-panel.reactions-pagebegin {
+    margin: 5px 0 25px;
+    padding: 0 0 25px;
+    border-width: 0 0 1px;
+}
+form.reactions {
+    border: 0;
+    display: block;
+}
+form.reactions input#reactions-required-email[type="email"] {
+    left: -90000px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    position: absolute;
+    box-shadow: none;
+}
+form.reactions button {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+}
+form.reactions .reactions-ratings {
+    display: grid;
+    justify-items: center;
+}
+form.reactions .reactions-ratings.columns-1 {
+    justify-content: center;
+    grid-template-columns: 100px;
+}
+form.reactions .reactions-ratings.columns-2 {
+    justify-content: center;
+    grid-template-columns: 100px 100px;
+}
+form.reactions.reactions-mode-stars .reactions-ratings.columns-3 {
+    justify-content: center;
+    grid-template-columns: 50px 50px 50px;
+}
+form.reactions.reactions-mode-stars .reactions-ratings.columns-5 {
+    justify-content: center;
+    grid-template-columns: 50px 50px 50px 50px 50px;
+}
+form.reactions .reactions-ratings.columns-5 {
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+.plugin.plugin-reactions .reactions-ratings.columns-5 {
+    grid-template-columns: 100%;
+}
+/* @end GENERAL */
+
+/* @start LIKE|DISLIKE RATING */
+.reactions-mode-like button .button-icon {
+    width: 38px;
+    height: auto;
+    transition: color 142ms linear;
+}
+.reactions-mode-like button svg {
+    fill: grey;
+    width: 100%;
+    height: auto;
+    transition: fill 142ms linear;
+}
+.reactions-mode-like button.active-black:hover svg,
+.reactions-mode-like button.active-black.active svg {
+    fill: black;
+}
+.reactions-mode-like button.active-red:hover svg,
+.reactions-mode-like button.active-red.active svg {
+    fill: #dc3545;
+}
+.reactions-mode-like button.active-orange:hover svg,
+.reactions-mode-like button.active-orange.active svg {
+    fill: #FF813F;
+}
+.reactions-mode-like button.active-yellow:hover svg,
+.reactions-mode-like button.active-yellow.active svg {
+    fill: #ffc107;
+}
+.reactions-mode-like button.active-green:hover svg,
+.reactions-mode-like button.active-green.active svg {
+    fill: #28a745;
+}
+.reactions-mode-like button.active-blue:hover svg,
+.reactions-mode-like button.active-blue.active svg {
+    fill: #007bff;
+}
+.reactions-mode-like button.active-violet:hover svg,
+.reactions-mode-like button.active-violet.active svg {
+    fill: #9632C8;
+}
+.reactions-mode-like button .button-count {
+    min-width: 40px;
+    margin: 7px 0 0;
+    padding: 3px 5px;
+    display: inline-block;
+    font-size: 13px;
+    text-align: center;
+    background-color: #f4f6f8;
+    border-radius: 3px;
+}
+/* @end LIKE|DISLIKE RATING */
+
+/* @start STAR RATING */
+.reactions-mode-stars {
+    direction: rtl;
+}
+.reactions-mode-stars .rating-star,
+.reactions-mode-stars button.star {
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-align: center;
+}
+.reactions-mode-stars button.star {
+    width: 38px;
+    height: auto;
+    margin: 6px;
+    transition: color 142ms linear;
+}
+.reactions-mode-stars button.star svg {
+    fill: grey;
+    width: 100%;
+    height: auto;
+    transition: fill 142ms linear;
+}
+.reactions-mode-stars .reactions-ratings.columns-3 .rating-label {
+    direction: ltr;
+    grid-column: span 3;
+}
+.reactions-mode-stars .reactions-ratings.columns-5 .rating-label {
+    direction: ltr;
+    grid-column: span 5;
+}
+
+/* Show Paths */
+.reactions-mode-stars button.star svg path {
+    display: none;
+}
+.reactions-mode-stars .star-empty button.star svg path#star-o {
+    display: block;
+}
+.reactions-mode-stars .star-half button.star svg path#star-half-o {
+    display: block;
+}
+.reactions-mode-stars .star-full button.star svg path#star {
+    display: block;
+}
+.reactions-mode-stars .rating-star:hover ~ .rating-star button.star svg path#star-o,
+.reactions-mode-stars .rating-star:hover ~ .rating-star button.star svg path#star-half-o {
+    display: none;
+}
+.reactions-mode-stars .rating-star:hover button.star svg path#star,
+.reactions-mode-stars .rating-star:hover ~ .rating-star button.star svg path#star {
+    display: block;
+}
+
+/* Colorize Active */
+.reactions-mode-stars .star-full.active-black button svg,
+.reactions-mode-stars .star-half.active-black button svg {
+    fill: black;
+}
+.reactions-mode-stars .star-full.active-red button svg,
+.reactions-mode-stars .star-half.active-red button svg {
+    fill: #dc3545;
+}
+.reactions-mode-stars .star-full.active-orange button svg,
+.reactions-mode-stars .star-half.active-orange button svg {
+    fill: #FF813F;
+}
+.reactions-mode-stars .star-full.active-yellow button svg,
+.reactions-mode-stars .star-half.active-yellow button svg {
+    fill: #ffc107;
+}
+.reactions-mode-stars .star-full.active-green button svg,
+.reactions-mode-stars .star-half.active-green button svg {
+    fill: #28a745;
+}
+.reactions-mode-stars .star-full.active-blue button svg,
+.reactions-mode-stars .star-half.active-blue button svg {
+    fill: #007bff;
+}
+.reactions-mode-stars .star-full.active-violet button svg,
+.reactions-mode-stars .star-half.active-violet button svg {
+    fill: #9632C8;
+}
+
+/* Colorize Hover */
+.reactions-mode-stars .hover-black:hover button svg,
+.reactions-mode-stars .hover-black:hover ~ .rating-star button svg {
+    fill: black;
+}
+.reactions-mode-stars .hover-red:hover button svg,
+.reactions-mode-stars .hover-red:hover ~ .rating-star button svg {
+    fill: #dc3545;
+}
+.reactions-mode-stars .hover-orange:hover button svg,
+.reactions-mode-stars .hover-orange:hover ~ .rating-star button svg {
+    fill: #FF813F;
+}
+.reactions-mode-stars .hover-yellow:hover button svg,
+.reactions-mode-stars .hover-yellow:hover ~ .rating-star button svg {
+    fill: #ffc107;
+}
+.reactions-mode-stars .hover-green:hover button svg,
+.reactions-mode-stars .hover-green:hover ~ .rating-star button svg {
+    fill: #28a745;
+}
+.reactions-mode-stars .hover-blue:hover button svg,
+.reactions-mode-stars .hover-blue:hover ~ .rating-star button svg {
+    fill: #007bff;
+}
+.reactions-mode-stars .hover-violet:hover button svg,
+.reactions-mode-stars .hover-violet:hover ~ .rating-star button svg {
+    fill: #9632C8;
+}
+/* @end STAR RATING */
+
+/* @start EMOJI RATING */
+.reactions-mode-emojies button.emoji {
+    position: relative;
+    text-align: center;
+}
+.plugin.plugin-reactions .reactions-mode-emojies button.emoji {
+    width: 125px;
+    margin: 5px auto;
+    text-align: left;
+}
+.reactions-mode-emojies button .emoji-image {
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+}
+.plugin.plugin-reactions .reactions-mode-emojies button .emoji-image {
+    width: auto;
+    display: inline-block;
+}
+.reactions-mode-emojies button .emoji-image img {
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
+    transition: opacity 142ms linear, transform 142ms linear;
+}
+.reactions-mode-emojies button.active .emoji-image img,
+.reactions-mode-emojies button:hover .emoji-image img {
+    opacity: 1;
+    transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+}
+.reactions-mode-emojies button .emoji-label {
+    left: 50%;
+    bottom: 100%;
+    color: white;
+    margin: 0;
+    padding: 3px 8px;
+    opacity: 0;
+    display: inline-block;
+    position: absolute;
+    font-size: 12px;
+    background-color: #222;
+    border-radius: 3px;
+    transform: translateX(-50%) translateY(-15px);
+    transition: opacity 142ms linear, transform 142ms ease-in-out;
+}
+.plugin.plugin-reactions .reactions-mode-emojies button .emoji-label {
+    top: 50%;
+    left: auto;
+    right: 100%;
+    bottom: auto;
+    transform: translateX(-25px) translateY(-50%);
+}
+.reactions-mode-emojies button .emoji-label::after {
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin: 0 0 0 -8px;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border-style: solid;
+    border-width: 8px 8px 0 8px;
+    border-color: #222222 transparent transparent transparent;
+}
+.plugin.plugin-reactions .reactions-mode-emojies button .emoji-label::after {
+    top: 50%;
+    left: 100%;
+    margin: -8px 0 0 0;
+    border-width: 8px 0 8px 8px;
+    border-color: transparent transparent transparent #222222;
+}
+.reactions-mode-emojies button:hover .emoji-label {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+.plugin.plugin-reactions .reactions-mode-emojies button:hover .emoji-label {
+    transform: translateX(-15px) translateY(-50%);
+}
+.reactions-mode-emojies button .emoji-count {
+    min-width: 40px;
+    margin: 7px 0 0;
+    padding: 3px 5px;
+    display: inline-block;
+    font-size: 13px;
+    text-align: center;
+    background-color: #f4f6f8;
+    border-radius: 3px;
+}
+.plugin.plugin-reactions .reactions-mode-emojies button .emoji-count {
+    margin-left: 10px;
+}
+/* @end EMOJI RATING */
