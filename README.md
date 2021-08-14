@@ -35,7 +35,7 @@ The following awesome dependencies are included in this package.
 
 Installation
 ------------
-1. Download the **Reactions** or Buy the [**Reactions+**](https://gum.co/reactions-plus) Plugin
+1. Download the **Reactions**
 2. Upload the main plugin folder to your `bl-plugins` directory of your Bludit Website(s)
 3. Enable the "Reactions" or "Reactions+" Plugin on the Plugins admin page
 
